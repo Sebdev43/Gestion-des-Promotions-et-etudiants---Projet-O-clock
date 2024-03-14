@@ -7,6 +7,10 @@ const studentDataMapper = {
 
     return studentsFromPromo;
   },
+  async createStudents(studentData) {
+    await client.query('INSERT INTO student (first_name, last_name, github_username, promo_id) VALUES ($1, $2, $3, $4)', [studentData.first_name, studentData.last_name, studentData.github_username, studentData.promo_id]);
+
+  },
 };
 
 module.exports = studentDataMapper;

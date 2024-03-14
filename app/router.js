@@ -3,7 +3,7 @@ const { Router } = require('express');
 const { home } = require('./controllers/mainController');
 const {
   listPromo, detailPromo, listStudentsFromPromo, showCreatePromoForm,
-  createPromo,
+  createPromo, showCreateStudentsForm, createStudents,
 } = require('./controllers/promoController');
 
 const router = Router();
@@ -14,5 +14,7 @@ router.get('/promos/create', showCreatePromoForm);
 router.post('/promos/create', createPromo);
 router.get('/promos/:id', detailPromo);
 router.get('/promos/:id/students', listStudentsFromPromo);
+router.get('/students/create', showCreateStudentsForm);
+router.post('/students/create', createStudents);
 
 module.exports = router;
