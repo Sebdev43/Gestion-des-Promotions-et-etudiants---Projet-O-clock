@@ -3,8 +3,9 @@ const { Router } = require('express');
 const { home } = require('./controllers/mainController');
 const {
   listPromo, detailPromo, listStudentsFromPromo, showCreatePromoForm,
-  createPromo, showCreateStudentsForm, createStudents,
+  createPromo,
 } = require('./controllers/promoController');
+const { showCreateStudentsForm, createStudents } = require('./controllers/studentController');
 
 const router = Router();
 
